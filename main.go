@@ -13,6 +13,7 @@ import (
 	"github.com/shirou/gopsutil/load"
 )
 
+
 func main() {
 	println("Starting")
 	println("Fetching System Preferences and System information...")
@@ -57,6 +58,7 @@ func main() {
 
 }
 
+
 // Uptime calculates the system uptime
 func uptime() string {
 	// Get the system boot time using the syscall package
@@ -70,6 +72,7 @@ func uptime() string {
 	uptimeDuration := time.Duration(sysinfo.Uptime) * time.Second
 	return fmt.Sprintf("%v", uptimeDuration)
 }
+
 
 // A function that obtains the memory usage and information of the system
 func memoryInfo() {
@@ -109,6 +112,7 @@ func diskUsage(path string) {
 	fmt.Printf("Free: %d MB\n", free)
 }
 
+
 // a function that returns network interface address and port number
 
 func networkInfo() {
@@ -131,6 +135,7 @@ func networkInfo() {
 	}
 }
 
+
 // CPU load statistics function
 func cpuLoad() {
 	avg, err := load.Avg()
@@ -142,6 +147,7 @@ func cpuLoad() {
 	fmt.Printf("Load Average (1m, 5m, 15m): %.2f, %.2f, %.2f\n", avg.Load1, avg.Load5, avg.Load15)
 }
 
+
 // function to return detailed OS information
 func osInfo() {
 	out, err := exec.Command("uname", "-a").Output()
@@ -151,6 +157,8 @@ func osInfo() {
 	}
 	fmt.Printf("OS Info: %s\n", string(out))
 }
+
+
 
 // Final function to print all this information from all those functions
 func displaySystemInfo() {
