@@ -4,7 +4,7 @@ Go script that fetches and displays system information,
 
 This project is a Go script that fetches and displays comprehensive system information, such as operating system details, memory usage, CPU load, disk usage, network interfaces, and more. The script is useful for system diagnostics, monitoring, and retrieving essential system information.
 
-## Features
+# Features
 Operating System and Architecture: Displays the operating system name and architecture.
 CPU Information: Shows the number of CPU cores and currently active goroutines.
 Memory Usage: Displays total, free, and used memory.
@@ -18,10 +18,10 @@ User Information: Retrieves and displays the current user’s username and home 
 Detailed OS Information: Uses the uname command to fetch detailed OS information.
 
 
-## Installation
+# Installation
 
 
-# Clone the repository:
+## Clone the repository:
 
 
     git clone https://github.com/C9b3rD3vi1/System_Info_Script.git
@@ -36,14 +36,14 @@ Make sure you have Go installed. Additionally, the script uses the gopsutil pack
     go get github.com/shirou/gopsutil/load
 
 
-# Build the project:
+## Build the project:
 
 You can build the script into a binary:
 
     go build -o System_Infor_Script
 
 
-# Run the script:
+## Run the script:
 
 After building, you can run the script using:
 
